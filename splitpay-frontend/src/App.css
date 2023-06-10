@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+h2 {
+  color: black
+}
+
+.App-logo {
+  /* margin: 0; */
+  /* margin-top: 0%; */
+  height: 40vmin;
+}
+
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
