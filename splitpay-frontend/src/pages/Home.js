@@ -1,14 +1,14 @@
 import '../App.css';
-import {useState} from 'react';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import logo from "../assets/logo.png"
 
 function Home() {
   return (
     <div className="App">
       <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <h1>MomentPay</h1>
-        <button>
+        <button className='loginButton'>
           <a href="/login">Login</a>
         </button>
       </header>

@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Layout from "./pages/Layout";
 import Update from "./pages/Update";
 import API from "./pages/API";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="update" element={<Update />} />
         <Route path="about" element={<About />} />
         <Route path="api" element={<API />} />
+        <Route path="login" element={<Login />} />
       </Route>
     </Routes>
   </BrowserRouter>
