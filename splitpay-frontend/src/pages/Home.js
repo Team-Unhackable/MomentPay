@@ -7,8 +7,10 @@ function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>SplitPay</h1>
-        
+        <h1>MomentPay</h1>
+        <button>
+          <a href="/login">Login</a>
+        </button>
       </header>
     </div>
   );
