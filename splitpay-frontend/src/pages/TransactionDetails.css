@@ -1,0 +1,39 @@
+.transaction-details {
+    width: 350px;
+    margin: 0 auto;
+    padding: 80px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+  
+  .detail-row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    flex: 0 0 150px;
+    font-weight: bold;
+  }
+  
+  .value {
+    flex: 1;
+  }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://cdn.discordapp.com/attachments/1008571141507534928/1118801887475540008/giselle_1994_winners_and_losers_cheering_on_a_cloud_in_a_soft_p_b0114d3b-6716-435c-8a2d-a01779d5198b.png'); /* 替换为实际的背景图像链接 */
+    background-size: cover;
+    background-position: center;
+  }
+  
