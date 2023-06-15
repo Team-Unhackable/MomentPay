@@ -5,6 +5,8 @@ import Expense from "./pages/Expense";
 import Layout from "./pages/Layout";
 import User from "./pages/User";
 import Login from "./pages/Login";
+import Order from "./pages/Order";
+import TransactionDetails from "./pages/TransactionDetails";
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
         <Route path="expense" element={<Expense />} />
         <Route path="user" element={<User />} />
         <Route path="login" element={<Login />} />
+        <Route path="order" element={<Order />} />
+        <Route path="transactionDetails" element={<TransactionDetails />} />
       </Route>
     </Routes>
   </BrowserRouter>
