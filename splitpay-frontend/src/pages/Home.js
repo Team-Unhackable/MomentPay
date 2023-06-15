@@ -6,6 +6,8 @@ function Home() {
   function logout() {
     localStorage.setItem('login', false);
     localStorage.setItem('username', '');
+    localStorage.setItem('email', '');
+    localStorage.setItem('id', '');
   }
   
   if (localStorage.getItem('login') === 'true') {
