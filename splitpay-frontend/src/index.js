@@ -1,10 +1,9 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import Expense from "./pages/Expense";
 import Layout from "./pages/Layout";
-import Update from "./pages/Update";
-import API from "./pages/API";
+import User from "./pages/User";
 import Login from "./pages/Login";
 
 export default function App() {
@@ -13,9 +12,8 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Layout />} basename="/">
         <Route index element={<Home />} />
-        <Route path="update" element={<Update />} />
-        <Route path="about" element={<About />} />
-        <Route path="api" element={<API />} />
+        <Route path="expense" element={<Expense />} />
+        <Route path="user" element={<User />} />
         <Route path="login" element={<Login />} />
       </Route>
     </Routes>

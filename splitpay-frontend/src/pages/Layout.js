@@ -7,9 +7,9 @@ const Layout = () => {
       <nav class="navbar">
         <ul>
             <Link to="/">APP</Link>
-            <Link to="/update">Update</Link>
-            <Link to="/about">About</Link>
-            <Link to="/api">API</Link>
+            <Link to="/expense">Expense</Link>
+            <Link to="/user">User Inforamtion</Link>
+            <Link to="/login">Login</Link>
         </ul>
       </nav>
       <Outlet />
