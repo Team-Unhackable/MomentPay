@@ -46,6 +46,7 @@ const Order = () => {
 
   return (
     <div className="order-page">
+      <h1>Payment</h1>
       <h2>Lib Cafe @ PolyU</h2>
       <div className="product-info">
         <img src={coffee} alt="Coffee Icon" className="product-icon" />

@@ -8,8 +8,9 @@ const Layout = () => {
         <ul>
             <Link to="/">APP</Link>
             <Link to="/expense">Expense</Link>
-            <Link to="/user">User Inforamtion</Link>
-            <Link to="/login">Login</Link>
+            <Link to="/user">User information</Link>
+            {/* <Link to="/login">Login</Link> */}
+            <Link to="/order">Order</Link>
         </ul>
       </nav>
       <Outlet />

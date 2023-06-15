@@ -2,7 +2,7 @@ const User = () => {
     if (localStorage.getItem('login') === 'true') {
         return (
             <center>
-                <h1>User Information</h1>
+                <h1>User information</h1>
                 <table>
                     <h2 align='left'>
                     <tr>
