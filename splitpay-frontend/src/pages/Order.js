@@ -48,11 +48,13 @@ const Order = () => {
     return (
       <div className="order-page">
         <h1>Payment</h1>
-        <h2>Lib Cafe @ PolyU</h2>
+        {/* <h2>Lib Cafe @ PolyU</h2> */}
+        <h2>{localStorage.getItem('paymentPlace')}</h2>
+        <h2>Time: <i>{localStorage.getItem('paymentDate')}</i></h2>
         <div className="product-info">
           <img src={coffee} alt="Coffee Icon" className="product-icon" />
-          <h3>Flat White</h3>
-          <p>25 $HKD</p>
+          <h3>{localStorage.getItem('product')} x {localStorage.getItem("productAmount")}</h3>
+          <p>Total: {localStorage.getItem('paymentAmount')} $HKD</p>
         </div>
         <h3>Select a payment method:</h3>
         <div className="payment-methods">
@@ -122,7 +124,7 @@ const Order = () => {
             <img src={LinePayIcon} alt="Line Pay Icon" className="payment-icon" />
             LinePay
           </label>
-          <label>
+          {/* <label>
             <button
               type="button"
               value="Add New"
@@ -131,7 +133,7 @@ const Order = () => {
             >
               <span className="add-payment-icon">+</span> Add a new payment method
             </button>
-          </label>
+          </label> */}
         </div>
         <div className="buttons">
           <button onClick={GoToTransactionDetails}>Confirm</button>

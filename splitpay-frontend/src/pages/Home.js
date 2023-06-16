@@ -4,10 +4,7 @@ import logo from "../assets/logo.png"
 
 function Home() {
   function logout() {
-    localStorage.setItem('login', false);
-    localStorage.setItem('username', '');
-    localStorage.setItem('email', '');
-    localStorage.setItem('id', '');
+    localStorage.clear();
   }
   
   if (localStorage.getItem('login') === 'true') {

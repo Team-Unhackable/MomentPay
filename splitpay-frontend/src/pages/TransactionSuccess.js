@@ -2,6 +2,7 @@ import React from 'react';
 import './TransactionSuccess.css';
 
 const TransactionSuccess = () => {
+  localStorage.setItem('paymentStatus', 'true');
   return (
     <div className="transaction-success">
       <div className="background-image"></div>
