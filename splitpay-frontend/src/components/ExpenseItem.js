@@ -40,9 +40,11 @@ const ExpenseItem = (props) => {
 		</li>
 		{showOtherPayers && (
 			<ul className="other-payers">
-        	<li class="list-item">{localStorage.getItem("userName")}     <span class="payment-status bill-payer">Bill-Payer</span></li>
-			<li class="list-item">{localStorage.getItem("userName")}  <span class="amount">{localStorage.getItem("paymentAmount")} $HKD </span><span class="payment-status paid">Paid</span></li>
-			<li class="list-item">{localStorage.getItem("otherPayers")}  <span class="amount">{localStorage.getItem("totalAmount") - localStorage.getItem("paymentAmount")} $HKD </span><span class="payment-status unpaid">Unpaid</span></li>
+				<ul>
+				{/* <li class="list-item">{localStorage.getItem("userName")}  <span class="payment-status bill-payer">Bill-Payer</span></li> */}
+				<li class="list-item">{localStorage.getItem("username")}  <span class="amount">{localStorage.getItem("paymentAmount")} $HKD </span><span class="payment-status paid">Paid</span></li>
+				<li class="list-item">{localStorage.getItem("otherPayers")}  <span class="amount">{localStorage.getItem("totalAmount") - localStorage.getItem("paymentAmount")} $HKD </span><span class="payment-status unpaid">Unpaid</span></li>
+				</ul>
         	</ul>
       		)}
 		</div>
