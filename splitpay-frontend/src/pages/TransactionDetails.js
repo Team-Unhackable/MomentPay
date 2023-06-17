@@ -4,22 +4,6 @@ import './TransactionDetails.css';
 const TransactionDetails = () => {
   localStorage.setItem('paymentStatus', 'true');
 
-  function paymentOtherInfoAfterSuccess() {
-    const userName = localStorage.getItem('username');
-    const url = 'https://my-json-server.typicode.com/Team-Unhackable/MomentPay-Demo-Data/' + userName;
-
-    fetch(url, {
-        method: 'GET'
-    })
-    .then(res => res.json())
-    .then(data => {
-      localStorage.setItem('paymentMethod', data[0].Payment[0].paymentMethod);
-      localStorage.setItem('paymentId', data[0].Payment[0].paymentId);
-    })
-  }
-  
-  paymentOtherInfoAfterSuccess();
-
   return (
     <div className="transaction-details">
       <h2>Transaction Details</h2>

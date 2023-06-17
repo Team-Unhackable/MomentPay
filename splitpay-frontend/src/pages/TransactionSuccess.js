@@ -15,6 +15,22 @@ const TransactionSuccess = () => {
     navigate('/expense');
   }
 
+  function paymentOtherInfoAfterSuccess() {
+    const userName = localStorage.getItem('username');
+    const url = 'https://my-json-server.typicode.com/Team-Unhackable/MomentPay-Demo-Data/' + userName;
+  
+    fetch(url, {
+        method: 'GET'
+    })
+    .then(res => res.json())
+    .then(data => {
+      localStorage.setItem('paymentMethod', data[0].Payment[0].paymentMethod);
+      localStorage.setItem('paymentId', data[0].Payment[0].paymentId);
+    })
+  }
+
+  paymentOtherInfoAfterSuccess();
+
   return (
     <div className="transaction-success">
       <div className="content">
