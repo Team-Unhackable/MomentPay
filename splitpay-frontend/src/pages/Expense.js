@@ -27,7 +27,7 @@ const Expense = () => {
             }
           }
         })
-      }
+    }
 
     if (localStorage.getItem('login') === 'true') {
         paymentInfo();

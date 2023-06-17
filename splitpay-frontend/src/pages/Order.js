@@ -33,7 +33,8 @@ const Order = () => {
   }
 
   const GoToTransactionDetails =() => {
-    navigate('/TransactionDetails');
+    // navigate('/TransactionDetails');
+    navigate('/transactionSuccess');
   }
 
   const GoToUser =() => {
