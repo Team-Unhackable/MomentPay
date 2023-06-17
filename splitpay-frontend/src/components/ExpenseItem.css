@@ -1,0 +1,47 @@
+.list-group-item {
+    position: relative;
+  }
+  
+  .list-group-item .triangle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid black;
+    cursor: pointer;
+  }
+  
+  .list-group-item .triangle.triangle-up {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid black;
+  }
+  .other-payers li{
+    font-size: 1.3rem;
+  }
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .payment-status{
+    font-size: 1.3rem;
+    margin-left: auto;
+  }
+  .payment-status.bill-payer{
+    color:blue;
+  }
+  .payment-status.paid{
+    color:green;
+  }
+  .payment-status.unpaid{
+    color:red;
+  }
+  .amount {
+    margin-left: 800px;
+  }
+  

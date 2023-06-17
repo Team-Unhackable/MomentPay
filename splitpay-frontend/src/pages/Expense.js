@@ -5,6 +5,7 @@ import Paid from '../components/Paid';
 import Total from '../components/Total';
 import ExpenseList from '../components/ExpenseList';
 import AddExpenseForm from '../components/AddExpenseForm';
+import scanner from "../assets/scanner.png";
 
 const Expense = () => {
 
@@ -17,16 +18,19 @@ const Expense = () => {
         })
         .then(res => res.json())
         .then(data => {
-          localStorage.setItem('paymentPlace', data[0].Payment[0].paymentPlace);
-          localStorage.setItem('paymentDate', data[0].Payment[0].paymentDate);
-          for (var i = 0; i < data[0].Payment[0].totalProuducts; i++) {
-            if (data[0].Payment[0].products[0].payer === userName) {
-              localStorage.setItem('product', data[0].Payment[0].products[0].productName);
-              localStorage.setItem('productAmount', data[0].Payment[0].products[0].productAmount);
-              localStorage.setItem('totalAmount', data[0].Payment[0].totalAmount);
-              localStorage.setItem('paymentAmount', data[0].Payment[0].products[0].productPrice * data[0].Payment[0].products[0].productAmount);
+            localStorage.setItem('paymentPlace', data[0].Payment[0].paymentPlace);
+            localStorage.setItem('paymentDate', data[0].Payment[0].paymentDate);
+            console.log(data[0].Payment[0].payers[1].payerName);
+            localStorage.setItem('otherPayers', data[0].Payment[0].payers[1].payerName);
+
+            for (var i = 0; i < data[0].Payment[0].totalProuducts; i++) {
+                if (data[0].Payment[0].products[0].payer === userName) {
+                    localStorage.setItem('product', data[0].Payment[0].products[0].productName);
+                    localStorage.setItem('productAmount', data[0].Payment[0].products[0].productAmount);
+                    localStorage.setItem('totalAmount', data[0].Payment[0].totalAmount);
+                    localStorage.setItem('paymentAmount', data[0].Payment[0].products[0].productPrice * data[0].Payment[0].products[0].productAmount);
+                }
             }
-          }
         })
     }
 
@@ -63,7 +67,7 @@ const Expense = () => {
                     <div className='col-sm'>
                         <AddExpenseForm />
                     </div>
-                    
+                    < img src={scanner} style={{ width: "5%", height: "5%" }} alt="Scanner" className="payment-icon" />
                 </div>
             </div>
         );
