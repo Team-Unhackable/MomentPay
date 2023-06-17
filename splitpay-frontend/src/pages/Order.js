@@ -13,24 +13,49 @@ import { useNavigate } from 'react-router-dom';
 const Order = () => {
   const navigate=useNavigate();
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
+  const [creditCardType, setCreditCardType] = useState('');
+  
+  
+  const handleCreditCardTypeChange = (event) => {
+    setCreditCardType(event.target.value);
+  };
 
   const handlePaymentMethodChange = (event) => {
     setSelectedPaymentMethod(event.target.value);
   };
 
-  const handleConfirmPayment = () => {
-    // Perform the necessary logic for confirming the payment
-    console.log('Payment confirmed');
-  };
+  // const handleConfirmPayment = () => {
+  //   // Perform the necessary logic for confirming the payment
+  //   console.log('Payment confirmed');
+  // };
 
-  const handleCancelPayment = () => {
-    // Perform any cleanup or redirection needed when the payment is canceled
-    console.log('Payment canceled');
-  };
+  // const handleCancelPayment = () => {
+  //   // Perform any cleanup or redirection needed when the payment is canceled
+  //   console.log('Payment canceled');
+  // };
 
   const handleAddNewPaymentMethod = () => {
     console.log('Add new payment method');
   }
+
+  const renderCreditCardDropdown = () => {
+    if (selectedPaymentMethod === 'Credit Card') {
+      return (
+        <div>
+          <label>
+            Credit Card Type:
+            <select value={creditCardType} onChange={handleCreditCardTypeChange}>
+              <option value="Prompt">Please choose a card</option>
+              <option value="Visa">Visa  (4001 **** **** 0001)</option>
+              <option value="MasterCard">MasterCard  (5400 **** **** 8112)</option>
+              <option value="American Express">American Express  (3787 ****** 71000)</option>
+            </select>
+          </label>
+        </div>
+      );
+    }
+    return null;
+  };
 
   const GoToTransactionDetails =() => {
     // navigate('/TransactionDetails');
@@ -70,6 +95,9 @@ const Order = () => {
             <img src={CreditCardIcon} alt="Credit Card Icon" className="payment-icon 1" id="icon1"/>
             Credit Card
           </label>
+
+          {renderCreditCardDropdown()}
+
           <label>
             <input
               type="radio"
@@ -125,7 +153,7 @@ const Order = () => {
             <img src={LinePayIcon} alt="Line Pay Icon" className="payment-icon" />
             LinePay
           </label>
-          {/* <label>
+          <label>
             <button
               type="button"
               value="Add New"
@@ -134,8 +162,10 @@ const Order = () => {
             >
               <span className="add-payment-icon">+</span> Add a new payment method
             </button>
-          </label> */}
+          </label>
         </div>
+
+
         <div className="buttons">
           <button onClick={GoToTransactionDetails}>Confirm</button>
           <button onClick={GoToHome}>Cancel</button>

@@ -24,6 +24,7 @@ function Login({Login, error}) {
                 localStorage.setItem('username', userName);
                 localStorage.setItem('email', data[0].email);
                 localStorage.setItem('id', data[0].id);
+                localStorage.setItem('subscription', 'false');
                 navigate('/');
             } else {
                 console.log("Login unsuccessful");

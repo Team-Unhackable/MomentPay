@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Order from "./pages/Order";
 import TransactionDetails from "./pages/TransactionDetails";
 import TransactionSuccess from "./pages/TransactionSuccess";
+import Subscription from "./pages/Subscription";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="payment" element={<Order />} />
         <Route path="transactionDetails" element={<TransactionDetails />} />
         <Route path="transactionSuccess" element={<TransactionSuccess />} />
+        <Route path="subscription" element={<Subscription />} />
       </Route>
     </Routes>
   </BrowserRouter>

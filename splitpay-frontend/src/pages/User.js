@@ -1,4 +1,11 @@
 const User = () => {
+    var subscriptionStatue = '';
+    if (localStorage.getItem('subscription') === 'true') {
+        subscriptionStatue = 'True'
+    } else {
+        subscriptionStatue = 'False';
+    }
+
     if (localStorage.getItem('login') === 'true') {
         return (
             <center>
@@ -16,6 +23,10 @@ const User = () => {
                     <tr>
                         <th border-bottom='2px solid black'>Email: </th>
                         <th border-bottom='2px solid black'>{localStorage.getItem('email')}</th>
+                    </tr>
+                    <tr>
+                        <th border-bottom='2px solid black'>Subscription: </th>
+                        <th border-bottom='2px solid black'>{subscriptionStatue}</th>
                     </tr>
                     </h2>
                 </table>
