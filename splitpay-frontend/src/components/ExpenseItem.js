@@ -20,6 +20,9 @@ const ExpenseItem = (props) => {
 			navigate('/payment');
 		}
 	}
+	function contact(){
+		navigate('/User');
+	}
 	
 	if (localStorage.getItem('login') === 'true' && localStorage.getItem('paymentStatus') === 'true') {
 	return (
@@ -70,7 +73,8 @@ const ExpenseItem = (props) => {
 				<ul className="other-payers">
 				{/* <li class="list-item">{localStorage.getItem("userName")}  <span class="payment-status bill-payer">Bill-Payer</span></li> */}
 				<li class="list-item">{localStorage.getItem("username")}  <span class="amount">{localStorage.getItem("paymentAmount")} $HKD </span><span class="payment-status unpaid">Unpaid</span></li>
-				<li class="list-item">{localStorage.getItem("otherPayers")}  <span class="amount">{localStorage.getItem("totalAmount") - localStorage.getItem("paymentAmount")} $HKD </span><span class="payment-status unpaid">Unpaid</span></li>
+				<li class="list-item">{localStorage.getItem("otherPayers")}  <span class="amount">{localStorage.getItem("totalAmount") - localStorage.getItem("paymentAmount")} $HKD </span><span class="payment-status unpaid">Unpaid</span> </li>
+				<li><span class="emailAdr"> Contect: demo2@demo.com </span> <span><button onClick={contact} class="contactButton">Contact</button></span></li>
 				</ul>
 				)}
 			</div>

@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AddExpenseForm = () => {
+	const navigate = useNavigate();
+
+	function GoToHome() {
+		navigate('/');
+	}
 
 	return (
 		<form>
@@ -27,7 +33,7 @@ const AddExpenseForm = () => {
 			</div>
             <div className='row'>
             	<div className='col-sm'>
-					<button type='submit' className='btn btn-primary mt-3'>
+					<button type='submit' className='btn btn-primary mt-3' onClick={GoToHome}>
 						Save
 					</button>
 				</div>
