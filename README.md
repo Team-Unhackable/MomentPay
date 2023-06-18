@@ -12,8 +12,7 @@ MomentPay - A Web Application for Payment Split and Grouping Expense Tracking.
 - Split Payment
 - Link Payment
 - Expense Tracking
-- Recommendation System
-- ( Mix Payment )
+- Stratage Recommendation for Transfer & FX Exchange
 
 ## Code Usage
 
